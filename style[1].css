@@ -1,0 +1,117 @@
+
+
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Background Image */
+body {
+    background: url("https://media.clicksites.ai/clicksites/uploads/2231/financial_assistor_and_a_group_2da85e4c1d9cf02b.png") no-repeat center center/cover;
+    height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Slight transparency */
+    padding: 15px 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: red;
+    transition: 0.3s;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hidden on desktop */
+}
+
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Move Login Button to Leftmost Corner */
+.button-container {
+    position: absolute;
+    top: 3px;
+    right: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    background:blue;
+    color:aliceblue;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 10px 15px;
+    }
+
+    .nav-links li a {
+        color: white;
+        font-size: 18px;
+        display: block;
+    }
+
+    .hamburger {
+        display: block; /* Show on mobile */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
